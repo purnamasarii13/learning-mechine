@@ -1,0 +1,147 @@
+/* ===============================
+   GLOBAL STYLE
+=============================== */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container utama */
+.container {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Judul */
+h1 {
+    font-weight: 700;
+    color: #2b2b52;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Subjudul */
+h2 {
+    color: #3b3b70;
+    border-left: 5px solid #4c57d9;
+    padding-left: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   FORM INPUT
+=============================== */
+form {
+    background: #f9faff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e0e5f1;
+}
+
+label {
+    font-weight: 500;
+    color: #3d3d5c;
+}
+
+input.form-control {
+    border-radius: 10px;
+    border: 1px solid #d0d7e6;
+    transition: all 0.3s ease;
+}
+
+input.form-control:focus {
+    border-color: #4c57d9;
+    box-shadow: 0 0 5px rgba(76, 87, 217, 0.3);
+}
+
+/* Tombol */
+button.btn {
+    background-color: #4c57d9;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+button.btn:hover {
+    background-color: #3b47c4;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   CARD GRAFIK
+=============================== */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fdfdfd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(76, 87, 217, 0.15);
+}
+
+.card img {
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+/* ===============================
+   LIST SCORE
+=============================== */
+.list-group-item {
+    border: none;
+    background-color: #f1f3ff;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #2b2b52;
+}
+
+/* ===============================
+   ALERT
+=============================== */
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* ===============================
+   ANIMASI
+=============================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}

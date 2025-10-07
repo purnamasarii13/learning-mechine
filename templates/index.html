@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Scores Lookup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="p-4">
+    <div class="container">
+        <h1 class="mb-4">Student Scores Lookup</h1>
+
+        {% if message %}
+            <div class="alert alert-danger">{{ message }}</div>
+        {% endif %}
+
+        <form method="POST" class="mb-4">
+            <label for="hours">Masukkan Hours </label>
+            <input type="text" class="form-control mb-2" id="hours" name="hours" placeholder="Contoh: 2.5,5.1,3.2">
+            <button type="submit" class="btn btn-primary">Klik tampilkan Scores</button>
+        </form>
+
+        {% if matched_scores %}
+            <h2> Hasil Scores </h2>
+            <ul class="list-group mb-4">
+            {% for score in matched_scores %}
+                <li class="list-group-item">Score: {{ score }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if plots %}
+            <h2>Grafik Dataset:</h2>
+            <div class="row">
+            {% for plot in plots %}
+                <div class="col-md-6 mb-3">
+                    <div class="card p-2 shadow-sm">
+                        <img src="{{ url_for('static', filename=plot) }}" class="img-fluid" alt="Plot">
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
